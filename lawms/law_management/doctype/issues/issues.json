@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:issue_title",
+ "creation": "2024-11-18 20:19:40.052721",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "issue_title",
+  "issue_details"
+ ],
+ "fields": [
+  {
+   "description": "\u0639\u0646\u0648\u0627\u0646 \u0627\u0644\u0645\u0634\u0643\u0644\u0629",
+   "fieldname": "issue_title",
+   "fieldtype": "Data",
+   "label": "Issue Title",
+   "unique": 1
+  },
+  {
+   "description": "\u062a\u0641\u0627\u0635\u064a\u0644 \u0627\u0644\u0645\u0634\u0643\u0644\u0629",
+   "fieldname": "issue_details",
+   "fieldtype": "Text",
+   "label": "Issue Details"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-18 20:19:59.969746",
+ "modified_by": "Administrator",
+ "module": "law management",
+ "name": "Issues",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

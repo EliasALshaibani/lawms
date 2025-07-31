@@ -1,0 +1,225 @@
+{
+ "actions": [],
+ "autoname": "CASE-.#####",
+ "creation": "2024-11-23 18:05:50.106885",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "info_case_tab",
+  "case_id",
+  "gregorian_date",
+  "hijri_date",
+  "case_type",
+  "case_status",
+  "case_name",
+  "case_subject",
+  "colom_column",
+  "client",
+  "opponent",
+  "lawyer",
+  "court",
+  "judge",
+  "secretary",
+  "info_attachments_tab",
+  "attachments",
+  "agreed_amount",
+  "total_operational",
+  "report_html",
+  "count_sessionss",
+  "amended_from",
+  "info_case"
+ ],
+ "fields": [
+  {
+   "fieldname": "info_case_tab",
+   "fieldtype": "Tab Break",
+   "label": "Infor Case"
+  },
+  {
+   "fieldname": "case_id",
+   "fieldtype": "Data",
+   "label": "Case ID",
+   "options": "_name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "case_type",
+   "fieldtype": "Select",
+   "label": "Case Type",
+   "options": "\u0642\u0636\u064a\u0629 \u0627\u062d\u062a\u064a\u0627\u0644 \u0627\u0644\u0643\u062a\u0631\u0648\u0646\u064a\n\u0642\u0636\u064a\u0629 \u0627\u0644\u062d\u0642\u0648\u0642\n\u0642\u0635\u064a\u0629 \u0642\u062a\u0644\n\u0642\u0635\u064a\u0629 \u062a\u0632\u0648\u064a\u0631"
+  },
+  {
+   "description": "\u0627\u0633\u0645 \u0627\u0644\u0642\u0636\u064a\u0629.",
+   "fieldname": "case_name",
+   "fieldtype": "Data",
+   "label": "Case Name",
+   "unique": 1
+  },
+  {
+   "description": "\u0645\u0648\u0636\u0648\u0639 \u0627\u0644\u0642\u0636\u064a\u0629",
+   "fieldname": "case_subject",
+   "fieldtype": "Small Text",
+   "label": "Case Subject"
+  },
+  {
+   "description": "\u0627\u0633\u0645 \u0627\u0644\u0639\u0645\u064a\u0644\\\u0627\u0644\u0645\u0648\u0643\u0644",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Client",
+   "options": "Clients"
+  },
+  {
+   "fieldname": "opponent",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Opponent",
+   "options": "Opponents"
+  },
+  {
+   "fieldname": "lawyer",
+   "fieldtype": "Link",
+   "label": "Lawyer",
+   "options": "Lawyers"
+  },
+  {
+   "fieldname": "court",
+   "fieldtype": "Link",
+   "label": "Court",
+   "options": "Court"
+  },
+  {
+   "fieldname": "judge",
+   "fieldtype": "Link",
+   "label": "Judge",
+   "options": "Judge"
+  },
+  {
+   "fieldname": "secretary",
+   "fieldtype": "Link",
+   "label": "Secretary",
+   "options": "Judge Secretary"
+  },
+  {
+   "description": "\u062d\u0627\u0644\u0629 \u0627\u0644\u0642\u0636\u064a\u0629",
+   "fieldname": "case_status",
+   "fieldtype": "Select",
+   "label": "Case Status",
+   "options": "Open\nClosed\nPending"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Attachments"
+  },
+  {
+   "description": "\u0627\u0644\u0645\u0628\u0644\u063a \u0627\u0644\u0645\u062a\u0641\u0642 \u0639\u0644\u064a\u0647",
+   "fieldname": "agreed_amount",
+   "fieldtype": "Currency",
+   "label": "Agreed Amount"
+  },
+  {
+   "description": "\u0627\u0644\u062a\u0643\u0627\u0644\u064a\u0641 \u0627\u0644\u062a\u0634\u063a\u064a\u0644\u064a\u0629",
+   "fieldname": "total_operational",
+   "fieldtype": "Currency",
+   "label": "Total Operational"
+  },
+  {
+   "columns": 8,
+   "fieldname": "count_sessionss",
+   "fieldtype": "Link",
+   "label": "Count Sessionss",
+   "options": "Sessionss"
+  },
+  {
+   "fetch_from": "count_sessionss.session_id",
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Casee",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "colom_column",
+   "fieldtype": "Column Break",
+   "label": "colom"
+  },
+  {
+   "fieldname": "info_attachments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Info Attachments"
+  },
+  {
+   "fieldname": "info_case",
+   "fieldtype": "Data",
+   "in_filter": 1,
+   "in_standard_filter": 1,
+   "label": "Info Case"
+  },
+  {
+   "description": "\u0627\u0644\u0633\u0646\u0629 \u0627\u0644\u0642\u0627\u0646\u0648\u0646\u064a\u0629 \u0644\u0644\u0642\u0636\u064a\u0629",
+   "fieldname": "gregorian_date",
+   "fieldtype": "Date",
+   "label": "Case Year"
+  },
+  {
+   "fieldname": "hijri_date",
+   "fieldtype": "Data",
+   "label": "Hijri Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "report_html",
+   "fieldtype": "HTML Editor",
+   "label": "Report Html",
+   "options": "Sessionss"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-22 17:40:06.481818",
+ "modified_by": "Administrator",
+ "module": "law management",
+ "name": "Casee",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Users Lawyers",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "info_case",
+ "translated_doctype": 1
+}

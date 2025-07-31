@@ -1,0 +1,218 @@
+{
+ "actions": [],
+ "autoname": "format:{case_subject}-{num_session}",
+ "creation": "2024-11-23 18:05:58.129429",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "case_subject",
+  "num_session",
+  "gregorian_date",
+  "hijri_date",
+  "session_content",
+  "attachment",
+  "session_decision",
+  "attendance_report",
+  "recommendations",
+  "colom_column",
+  "session_id",
+  "client",
+  "opponent",
+  "judge",
+  "lawyer",
+  "next_session_tab",
+  "next_session_date",
+  "next_session_notification",
+  "session_decision_old",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "case_subject",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "case_subject",
+   "options": "Casee",
+   "reqd": 1
+  },
+  {
+   "description": "\u0627\u0644\u0631\u0642\u0645 \u0627\u0644\u0645\u0631\u062c\u0639\u064a \u0644\u0644\u062c\u0644\u0633\u0629",
+   "fetch_from": "case_subject.info_case",
+   "fetch_if_empty": 1,
+   "fieldname": "session_id",
+   "fieldtype": "Data",
+   "label": "Session ID",
+   "options": "Cases",
+   "read_only": 1
+  },
+  {
+   "description": "\u0627\u0633\u0645 \u0627\u0644\u0639\u0645\u064a\u0644 \u0627\u0644\u0648\u0643\u064a\u0644",
+   "fetch_from": "case_subject.client",
+   "fieldname": "client",
+   "fieldtype": "Link",
+   "label": "Client",
+   "options": "Clients",
+   "read_only": 1
+  },
+  {
+   "fieldname": "colom_column",
+   "fieldtype": "Column Break",
+   "label": "colom"
+  },
+  {
+   "fetch_from": "case_subject.opponent",
+   "fieldname": "opponent",
+   "fieldtype": "Link",
+   "label": "Opponent",
+   "options": "Opponents",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "case_subject.lawyer",
+   "fieldname": "lawyer",
+   "fieldtype": "Link",
+   "label": "Lawyer",
+   "options": "Lawyers",
+   "read_only": 1
+  },
+  {
+   "description": "\u0645\u0636\u0645\u0648\u0646 \u0627\u0644\u062c\u0644\u0633\u0629",
+   "fieldname": "session_content",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Session content",
+   "options": "\u0639\u0642\u062f \u0627\u0644\u062c\u0644\u0633\u0629\n\u0627\u0644\u062a\u0623\u062c\u064a\u0644 \u0625\u062f\u0627\u0631\u064a\u0627\u064b\n\u0627\u0633\u062a\u0628\u0639\u0627\u062f \u0627\u0644\u062c\u0644\u0633\u0629",
+   "reqd": 1
+  },
+  {
+   "description": " \u0642\u0631\u0627\u0631\u0627\u062a \u0627\u0644\u062c\u0644\u0633\u0629 \u0627\u0644\u0633\u0627\u0628\u0642\u0629 \\\u0627\u0644\u0648\u062b\u0627\u0626\u0642 \u0627\u0644\u0645\u0642\u062f\u0645\u0629 \u0628\u0627\u0644\u062c\u0644\u0633\u0629 ",
+   "fieldname": "attachment",
+   "fieldtype": "Table",
+   "label": "Attachment ",
+   "options": "Attachments"
+  },
+  {
+   "description": "\u0627\u0644\u0625\u062c\u0631\u0627\u0621\u0627\u062a \u0627\u0644\u062a\u064a \u062a\u0645\u062a \u0641\u064a \u062c\u0644\u0633\u0629 \u064a\u0648\u0645\u0646\u0627 \u0647\u0630\u0627",
+   "fieldname": "session_decision",
+   "fieldtype": "Text Editor",
+   "label": "Session Decision "
+  },
+  {
+   "description": "\u0642\u0631\u0627\u0631\u0627\u062a \u0627\u0644\u0645\u062d\u0643\u0645\u0629",
+   "fieldname": "attendance_report",
+   "fieldtype": "Text Editor",
+   "label": "Attendance report"
+  },
+  {
+   "fieldname": "next_session_tab",
+   "fieldtype": "Tab Break",
+   "label": "Next Session "
+  },
+  {
+   "description": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u062c\u0644\u0633\u0629 \u0627\u0644\u0642\u0627\u062f\u0645\u0629",
+   "fieldname": "next_session_date",
+   "fieldtype": "Date",
+   "label": "Next Session Date"
+  },
+  {
+   "default": "0",
+   "description": "\u062a\u0630\u0643\u064a\u0631 \u0628\u0627\u0644\u062c\u0644\u0633\u0629 \u0627\u0644\u0642\u0627\u062f\u0645\u0629",
+   "fieldname": "next_session_notification",
+   "fieldtype": "Check",
+   "label": "Next Session Notification"
+  },
+  {
+   "fetch_from": "amended_from.session_decision",
+   "fieldname": "session_decision_old",
+   "fieldtype": "Text Editor",
+   "label": "Session Decision old",
+   "options": "Sessionss"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sessionss",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fetch_from": "case_subject.judge",
+   "fieldname": "judge",
+   "fieldtype": "Data",
+   "label": "Judge",
+   "options": "Judge",
+   "read_only": 1
+  },
+  {
+   "description": "\u0631\u0642\u0645 \u0627\u0644\u062c\u0644\u0633\u0629",
+   "fieldname": "num_session",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Num Session"
+  },
+  {
+   "description": " \u0627\u0644\u062a\u0648\u0635\u064a\u0627\u062a",
+   "fieldname": "recommendations",
+   "fieldtype": "Small Text",
+   "label": "Recommendations"
+  },
+  {
+   "description": "\u062a\u0627\u0631\u064a\u062e \u0627\u0644\u062c\u0644\u0633\u0629",
+   "fieldname": "gregorian_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "label": "Session Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "hijri_date",
+   "fieldtype": "Data",
+   "label": "Hijri Date",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-14 17:26:42.884926",
+ "modified_by": "Administrator",
+ "module": "law management",
+ "name": "Sessionss",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Users Lawyers",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "session_id"
+}
