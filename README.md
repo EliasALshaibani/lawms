@@ -4,10 +4,6 @@ law management
 
 #### License
 
-MIT# lawms-
-# lawms-
-# lawms-
+MIT# lawms
 # lawms
-# lawms
-# lawms-
-# lawms-
+
